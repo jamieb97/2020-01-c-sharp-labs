@@ -6,6 +6,7 @@ namespace lab_09_OOP_intro
     {
         static void Main(string[] args)
         {
+            #region CreateGenericCar
             //var keyword INFER TYPE FROM RIGHT ie Car
             //car01 INSTANCE ie particular object created
             //Car is template used
@@ -23,11 +24,15 @@ namespace lab_09_OOP_intro
             newCar.Speed++;
             Console.WriteLine($"Final Speed{newCar.Speed}");
             var car02 = new Car("Mclaren", "P1", "Orange", 2200, 200);
+            #endregion
+            #region CreateS220Car
+            var s220car01 = new S220("black" , 2000); // Constructors NOT INHERITED
+            #endregion CreateS220Car
         }
     }
 
 
-
+    #region Classes
 
     class Car
     {
@@ -53,4 +58,27 @@ namespace lab_09_OOP_intro
             this.Speed = speed;
         }
     }
+
+    class Mercedes : Car { }
+
+    class SClass : Mercedes {
+        public bool sportsModel;
+        public bool leatherSeats;
+
+    }
+
+    class S220 : SClass {
+        public S220(string colour, int length)
+        {
+            Make = "Mercedes";
+            Model = "S220";
+            Colour = colour;
+            Length = length;
+            Speed = 0;
+
+        }
+    }
+
+    #endregion 
+
 }
