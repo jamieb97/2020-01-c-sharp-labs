@@ -9,31 +9,16 @@ namespace lab_23_rabbits
         static void Main(string[] args)
         {
             var rand = new Random();
-            string[] names = new string[] {"hector","bernd","pierre","matteo","lucas","kieran","gabbi","reiss","david","mbappe" };
+            string[] names = new string[] {"hector","lionel","pierre","matteo","paul","kieran","gabbi","jadon","zlatan","kylian" };
             var rabbit = new List<Rabbit>();
-
-            string theRabbit;
-            //var thisRabbit = new Rabbit();
-            //for(int i = 0; i < 10; i++)
-            //{
-            //    rabbit.Add(new Rabbit());
-            //    thisRabbit.rabbitId++;
-            //    thisRabbit.rabbitName = names[rand.Next(0,9)];
-            //    thisRabbit.age = rand.Next(0, 10);
-            //    theRabbit ="Rabbit name: " + thisRabbit.rabbitName + "\tRabbit age: " + thisRabbit.age.ToString() +"\tRabbit id: "+ thisRabbit.rabbitId;
-                
-            //}
 
             for(int i =0; i < 100; i++)
             {
                 rabbit.Add(new Rabbit());
                 rabbit[i].rabbitId = i;
-            }
-            for (int i = 0; i < rabbit.Count; i++)
-            {
+                rabbit[i].age = rand.Next(0,5);
                 rabbit[i].rabbitName = names[rand.Next(0, 9)];
-            }
-            rabbit.ForEach(item => item.age = 0 );  
+            } 
 
             rabbit.ForEach(item => Console.WriteLine($"Name: {item.rabbitName}\tAge: {item.age}\tID: {item.rabbitId}"));
             //lab 1
@@ -50,12 +35,10 @@ namespace lab_23_rabbits
             AgeRabbits(rabbit);
             rabbit.ForEach(item => Console.WriteLine($"Name: {item.rabbitName}\tAge: {item.age}\tID: {item.rabbitId}"));
             //bonus : put this into WPF
-
-            void AgeRabbits(List<Rabbit> x)
+            void AgeRabbits(List<Rabbit> rabage)
             {
-                x.ForEach(i => i.age++);
+                rabage.ForEach(item => item.age++);
             }
-
         }
     }
     class Rabbit 

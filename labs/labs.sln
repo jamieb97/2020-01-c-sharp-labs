@@ -39,17 +39,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_16_access_modifiers", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_17_value_reference_type", "lab_17_value_reference_type\lab_17_value_reference_type.csproj", "{418F0058-63A6-4508-BEED-FB56ADE5D5AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_18_loops", "lab_18_loops\lab_18_loops.csproj", "{2B9DC0A7-2636-41F5-9524-F9BC2ED27503}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_18_loops", "lab_18_loops\lab_18_loops.csproj", "{2B9DC0A7-2636-41F5-9524-F9BC2ED27503}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_20_collections", "lab_20_collections\lab_20_collections.csproj", "{CAD68662-B667-4191-8E55-8CD86CD976B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_20_collections", "lab_20_collections\lab_20_collections.csproj", "{CAD68662-B667-4191-8E55-8CD86CD976B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_19_list_queue_stack", "lab_19_list_queue_stack\lab_19_list_queue_stack.csproj", "{CAF6D3B6-6188-4086-BD33-2DCDF7F47AE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_19_list_queue_stack", "lab_19_list_queue_stack\lab_19_list_queue_stack.csproj", "{CAF6D3B6-6188-4086-BD33-2DCDF7F47AE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_21_exceptions", "lab_21_exceptions\lab_21_exceptions.csproj", "{4300A6E4-748F-4F12-AE75-18EA7FA09575}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_21_exceptions", "lab_21_exceptions\lab_21_exceptions.csproj", "{4300A6E4-748F-4F12-AE75-18EA7FA09575}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_22_throw_exception", "lab_22_throw_exception\lab_22_throw_exception.csproj", "{643C6861-C936-44C7-A06E-0621B5B6E418}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_22_throw_exception", "lab_22_throw_exception\lab_22_throw_exception.csproj", "{643C6861-C936-44C7-A06E-0621B5B6E418}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_23_rabbits", "lab_23_rabbits\lab_23_rabbits.csproj", "{D02C71B2-1F81-43C7-AD6F-31A2D37DD8CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_23_rabbits", "lab_23_rabbits\lab_23_rabbits.csproj", "{D02C71B2-1F81-43C7-AD6F-31A2D37DD8CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_24_breed_rabbits", "lab_24_breed_rabbits\lab_24_breed_rabbits.csproj", "{BC902759-D030-41A4-8DE2-E3614B227775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_25_variables", "lab_25_variables\lab_25_variables.csproj", "{CF1A4283-D0ED-42D8-AC73-7860D9996BA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +157,14 @@ Global
 		{D02C71B2-1F81-43C7-AD6F-31A2D37DD8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D02C71B2-1F81-43C7-AD6F-31A2D37DD8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D02C71B2-1F81-43C7-AD6F-31A2D37DD8CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC902759-D030-41A4-8DE2-E3614B227775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC902759-D030-41A4-8DE2-E3614B227775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC902759-D030-41A4-8DE2-E3614B227775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC902759-D030-41A4-8DE2-E3614B227775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF1A4283-D0ED-42D8-AC73-7860D9996BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1A4283-D0ED-42D8-AC73-7860D9996BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1A4283-D0ED-42D8-AC73-7860D9996BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1A4283-D0ED-42D8-AC73-7860D9996BA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
