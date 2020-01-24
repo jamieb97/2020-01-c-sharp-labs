@@ -102,7 +102,7 @@ namespace lab_26_rabbit_generator
             }
             foreach (var i in rabbits)
             {
-                i.age++;
+                
                 ListBreedRabbits.Items.Add(i.rabbitName + " " + i.age);
             }
 
