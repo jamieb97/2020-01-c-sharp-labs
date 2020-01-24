@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_24_breed_rabbits", "lab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_25_variables", "lab_25_variables\lab_25_variables.csproj", "{CF1A4283-D0ED-42D8-AC73-7860D9996BA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_26_rabbit_generator", "lab_26_rabbit_generator\lab_26_rabbit_generator.csproj", "{E4B1A87D-70B9-47EF-AC1E-BD7B2888E6EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{CF1A4283-D0ED-42D8-AC73-7860D9996BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF1A4283-D0ED-42D8-AC73-7860D9996BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF1A4283-D0ED-42D8-AC73-7860D9996BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B1A87D-70B9-47EF-AC1E-BD7B2888E6EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B1A87D-70B9-47EF-AC1E-BD7B2888E6EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B1A87D-70B9-47EF-AC1E-BD7B2888E6EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B1A87D-70B9-47EF-AC1E-BD7B2888E6EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
