@@ -27,6 +27,9 @@
         <Button x:Name="breedRabbits" Grid.Row="1" Grid.Column="2" Background="CadetBlue" FontSize="25" Click="ButtonBreedRabbitsClick" >Breed Rabbits</Button>
         <ListBox x:Name="ListBreedRabbits" Grid.Column="2" Grid.Row="3" Background="Aquamarine"/>
 
+        <Button x:Name="breedAgeRabbits" Grid.Row="1" Grid.Column="3" Background="CadetBlue" FontSize="25" Click="ButtonBreed3YRabbits" >Breed Rabbits 2.0</Button >
+        <ListBox x:Name="ListBreedRabs" Grid.Column="3" Grid.Row="3" Background="Aquamarine"/>
+
         <TextBlock x:Name="Title" TextAlignment="Center" FontSize="30" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Background="LightGray" >RABBIT GENERATOR</TextBlock>
         
     </Grid>
