@@ -57,6 +57,14 @@ namespace lab_35_variables_final
             //object is parent of all parents ie. top of computer hierarchy
             var getMyItemBack = (int)object01;
 
+            // nullable type
+            //intergers cannot be null
+            //booleans cannot be null
+            //doubles cannot be null
+            int? num03 = null;
+            int? databaseNumber = null;
+            bool? isAlive = null;
+
         }
     }
 
