@@ -70,10 +70,10 @@ namespace lab_31_test_practice
                 {
                     for (int k = 0; k < z; k++)
                     {
-                        arr[i, j, k] = k;
+                        arr[i, j, k] = i * j * k;
                     }
                 }
-            }
+            }   
             int sum = 0;
             foreach (var item in arr)
             {
@@ -121,7 +121,22 @@ namespace lab_31_test_practice
 
         public int Test_126_Loops(int[] array)
         {
-            
+            int i = 0;
+            while (i <= array.Length)
+            {
+                array[i] += 1;
+                i++;
+            }
+            do
+            {
+                array[i] += 3;
+                i--;
+            } while (i >= 0);
+            foreach(int item in array)
+            {
+                
+            }
+
             return -1;
         }
 
@@ -135,7 +150,7 @@ namespace lab_31_test_practice
         // return (x + y/z) observing BIDMAS rules
         public double Test_130_BIDMAS(int x, int y, int z)
         {
-            return -1.0;
+            return (y/z) + x;
         }
 
 
@@ -147,7 +162,9 @@ namespace lab_31_test_practice
          */
         public double Test_140_BIDMAS(int a, int b, int c, int d, int e, int f)
         {
-            return -1;
+            double value = 0;
+            value = ((a+b*c/d-e) / f);
+            return Math.Pow(value, 2);
         }
 
 

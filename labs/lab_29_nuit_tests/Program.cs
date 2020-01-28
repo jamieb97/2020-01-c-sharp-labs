@@ -50,9 +50,9 @@ namespace lab_29_nuit_tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestCase(2,2,2,4)]
+        [TestCase(2,2,2,1)]
         [TestCase(3,3,3,27)]
-        [TestCase(4,4,4,96)]
+        [TestCase(2,3,4,18)]
         public void Sum3DArrayTest(int num1, int num2, int num3, int expected)
         {
             var instance = new Basic_Tests();
@@ -69,6 +69,22 @@ namespace lab_29_nuit_tests
         {
             var instance = new Basic_Tests();
             var actual = instance.Test_125_Build_Array_And_Return_Sum_Of_Squares(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(2,2,2,3)]
+        public void BIDMASTest(int a, int b, int c, int expected)
+        {
+            var instance = new Basic_Tests();
+            var actual = instance.Test_130_BIDMAS(a, b, c);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(6,5,4,3,2,1,113)]
+        public void BIDMAS2Test(int a, int b, int c, int d, int e, int f, double expected)
+        {
+            var instance = new Basic_Tests();
+            var actual = instance.Test_140_BIDMAS(a, b, c, d, e, f);
             Assert.AreEqual(expected, actual);
         }
     }
