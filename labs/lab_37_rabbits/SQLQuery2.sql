@@ -22,6 +22,7 @@ create table rabbittable(
 
 insert into rabbittable values ('Beyonce',1, '2020-01-01', 1, 'Bee')
 insert into rabbittable values ('Jay-Z', 3, '2018-06-12', 1, 'NY')
+insert into rabbittable values ('R Kelly', 30, '2018-06-12', 1, 'Jail')
 
 
 select * from rabbittable

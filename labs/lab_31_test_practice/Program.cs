@@ -132,19 +132,18 @@ namespace lab_31_test_practice
                 array[i] += 3;
                 i--;
             } while (i >= 0);
-            foreach(int item in array)
+            foreach (int item in array)
             {
-                
+                array[item] = item * 2;
+            }
+            int sum = 0;
+            foreach (var item in array)
+            {
+                sum += item;
             }
 
-            return -1;
+            return sum;
         }
-
-
-
-
-
-
 
 
         // return (x + y/z) observing BIDMAS rules
@@ -160,17 +159,18 @@ namespace lab_31_test_practice
          What is ( (a+b*c/d-e) / f ) to the power n ?
          Code 2 examples with real numbers
          */
-        public double Test_140_BIDMAS(int a, int b, int c, int d, int e, int f)
+        public double Test_140_BIDMAS(int a, int b, int c, int d, int e, int f, int n)
         {
             double value = 0;
-            value = ((a+b*c/d-e) / f);
-            return Math.Pow(value, 2);
+            value = (a+((b*c)/d)-e) / f;
+            return Math.Pow(value, n);
         }
 
 
         public int Test_150_Return_Integer_Of_Char(char c)
         {
-            return -1;
+            double output = Char.GetNumericValue(c);
+            return (int)output;
         }
 
 
@@ -179,7 +179,7 @@ namespace lab_31_test_practice
         // Return ASCII number of letter 'l' as number 108 
         public int Test_160_ASCII_Return_Index_Of_String(string input, int index)
         {
-            return -1;
+            return Convert.ToInt32(input, index);
         }
 
 
