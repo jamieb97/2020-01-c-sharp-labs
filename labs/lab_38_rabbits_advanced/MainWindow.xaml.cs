@@ -39,6 +39,10 @@ namespace lab_38_rabbits_advanced
                 //}
             }
             // db not valid here
+            TextBoxRabbitID.IsReadOnly = true;
+            TextBoxRabbitName.IsReadOnly = true;
+            TextBoxRabbitAge.IsReadOnly = true;
+            ButtonEdit.IsEnabled = false;
         }
 
         private void ListViewRabbits_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -49,13 +53,20 @@ namespace lab_38_rabbits_advanced
                 TextBoxRabbitID.Text = Rabbit.RabbitTableID.ToString();
                 TextBoxRabbitName.Text = Rabbit.RabbitName.ToString();
                 TextBoxRabbitAge.Text = Rabbit.RabbitAge.ToString();
+                TextBoxRabbitID.IsReadOnly = true;
+                TextBoxRabbitName.IsReadOnly = true;
+                TextBoxRabbitAge.IsReadOnly = true;
             }
+            ButtonEdit.IsEnabled = true;
         }
 
         private void ButtonShowRabbits_Click(object sender, RoutedEventArgs e)
         {
             ListViewRabbits.ItemsSource = rabbits;
-            
+            //ListViewRabbits.ItemsSource = rabbits;
+            //TextBoxRabbitID.IsReadOnly = true;
+            //TextBoxRabbitName.IsReadOnly = true;
+            //TextBoxRabbitAge.IsReadOnly = true;
         }
 
         private void ListViewRabbits_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
@@ -76,6 +87,75 @@ namespace lab_38_rabbits_advanced
                     }
                 }
             }
+        }
+
+        private void ButtonAddRabbits_Click(object sender, RoutedEventArgs e)
+        {
+            if (ButtonAddRabbits.Content.ToString() == "Add Rabbit")
+            {
+                TextBoxRabbitName.IsReadOnly = false;
+                TextBoxRabbitAge.IsReadOnly = false;
+                TextBoxRabbitID.Text = "";
+                TextBoxRabbitName.Text = "";
+                TextBoxRabbitAge.Text = "";
+                ButtonAddRabbits.Content = "Save";
+            }
+            else
+            {
+                if (TextBoxRabbitName.Text.Length > 0)
+                {
+                    Int32.TryParse(TextBoxRabbitAge.Text, out int rabbitAge);
+                    var rabbitToAdd = new rabbittable()
+                    {
+                        RabbitName = TextBoxRabbitName.Text,
+                        RabbitAge = rabbitAge,
+                    };
+                    using (var db = new newrabbitdatabaseEntities()) 
+                    {
+                        db.rabbittables.Add(rabbitToAdd);
+                        db.SaveChanges();
+                        ListViewRabbits.ItemsSource = null;
+                        rabbits = db.rabbittables.ToList();
+                        ListViewRabbits.ItemsSource = rabbits;
+                    }
+                }
+
+                TextBoxRabbitName.IsReadOnly = true;
+                TextBoxRabbitAge.IsReadOnly = true;
+                ButtonAddRabbits.Content = "Add Rabbit";
+            }
+        }
+
+        private void ListViewRabbits_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void ButtonEdit_Click(object sender, RoutedEventArgs e)
+        {
+            if(rabbits != null)
+            {
+                if(ButtonEdit.Content.ToString() == "Edit")
+                {
+                    var shade = new SolidColorBrush(Color.FromRgb(253, 180, 200));
+                    TextBoxRabbitName.Background = shade;
+                    TextBoxRabbitAge.Background = shade;
+                    TextBoxRabbitName.IsReadOnly = false;
+                    TextBoxRabbitAge.IsReadOnly = false;
+                    ButtonEdit.Content = "Save";
+
+                }
+                else
+                {
+                    var shade = new SolidColorBrush(Color.FromRgb(170, 4, 50));
+                    TextBoxRabbitName.Background = shade;
+                    TextBoxRabbitAge.Background = shade;
+                    TextBoxRabbitName.IsReadOnly = true;
+                    TextBoxRabbitAge.IsReadOnly = true;
+                    ButtonEdit.Content = "Edit";
+                }
+            }
+            
         }
     }
 }

@@ -25,8 +25,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="LabelHeading" Content="Rabbit Database" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="38" Background="#FC799D" FontWeight="Bold" />
-        <ListView x:Name="ListViewRabbits" Grid.Column="0" Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="3" SelectionChanged="ListViewRabbits_SelectionChanged" Background="#AA0432" Foreground="White" MouseRightButtonUp="ListViewRabbits_MouseRightButtonDown">
+        <Label x:Name="LabelHeading" Content="Rabbit Database" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="38" Foreground="White" FontWeight="Bold" />
+        <ListView x:Name="ListViewRabbits" Grid.Column="0" Grid.Row="2" Grid.RowSpan="3" Grid.ColumnSpan="3" SelectionChanged="ListViewRabbits_SelectionChanged" Background="#AA0432" Foreground="White" MouseRightButtonUp="ListViewRabbits_MouseRightButtonDown" MouseDoubleClick="ListViewRabbits_MouseDoubleClick" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" DisplayMemberBinding="{Binding RabbitTableID}"/>
@@ -38,7 +38,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="ButtonShowRabbits" Content="Show Rabbits" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="30" Background="#FC799D" FontWeight="DemiBold" Height="72" VerticalAlignment="Top" Click="ButtonShowRabbits_Click"/>
+        <Button x:Name="ButtonShowRabbits" Content="Show Rabbits" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" FontSize="30" Background="#FC799D" FontWeight="DemiBold" Height="72" VerticalAlignment="Top" Click="ButtonShowRabbits_Click"/>
+        <Button x:Name="ButtonEdit" Content="Edit" Grid.Row="5" Grid.Column="5" Background="#FC799D" FontSize="30" FontWeight="DemiBold" Click="ButtonEdit_Click"/>
+        <Button x:Name="ButtonAddRabbits" Content="Add Rabbit" Grid.Row="5" Grid.Column="0" FontSize="30" Grid.ColumnSpan="3" Background="#FC799D" FontWeight="DemiBold" Click="ButtonAddRabbits_Click" />
         <Label x:Name="LabelRabbitID" Content="ID" Grid.Row="2" Grid.Column="4" Background="#FC799D" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25" FontWeight="DemiBold"/>
         <Label x:Name="LabelRabbitName" Content="Name" Grid.Row="2" Grid.Column="5" Background="#FC799D" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25" FontWeight="DemiBold"/>
         <Label x:Name="LabelRabbitAge" Content="Age" Grid.Row="2" Grid.Column="6" Background="#FC799D" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="25" FontWeight="DemiBold"/>
