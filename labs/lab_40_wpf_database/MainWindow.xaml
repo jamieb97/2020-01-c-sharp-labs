@@ -1,0 +1,56 @@
+﻿<Window x:Class="lab_40_wpf_database.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_40_wpf_database"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#c40404">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="LabelHeading" Content="jteam" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Background="Black" Foreground="White" FontWeight="Bold"/>
+        <ListView x:Name="GameView" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="#7d0000">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding GameID}"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding GameName}"/>
+                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding GamePrice}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="Basket" Content="Basket" Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Foreground="White" Background="Black"/>
+        <ListView x:Name="ListViewBasket" ItemsSource="{Binding basketdatabase}" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#7d0000">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding GameID}"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding GameName}"/>
+                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding GamePrice}"/>
+                    <GridViewColumn Header="Rating" DisplayMemberBinding="{Binding GameRating}"/>
+                    <GridViewColumn Header="Bought" DisplayMemberBinding="{Binding GameBought}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="ShowGames" Content="Show Games" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" FontSize="25" Click="ShowGames_Click" Foreground="White" Background="Black"/>
+        <Label x:Name="Cost" Content="Cost:" Grid.Row="6" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="White" Background="Black" FontSize="25"/>
+        <Button x:Name="ButtonPurchase" Content="Purchase" Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="2" FontSize="25" Click="ButtonPurchase_Click" Foreground="White" Background="Black"/>
+    </Grid>
+</Window>
