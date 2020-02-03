@@ -85,6 +85,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_39_overloading", "lab_3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_40_wpf_database", "lab_40_wpf_database\lab_40_wpf_database.csproj", "{16DE5DD0-1E0F-41CB-9DF3-FA36CD25B635}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_41_Northwind_Code_First", "lab_41_Northwind_Code_First\lab_41_Northwind_Code_First.csproj", "{E2890D45-9D65-4CB1-9FDF-F949BD446EE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_42_northwind_core", "lab_42_northwind_core\lab_42_northwind_core.csproj", "{1F815633-EFAB-44E6-8FED-3E092BA57F22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -255,6 +259,14 @@ Global
 		{16DE5DD0-1E0F-41CB-9DF3-FA36CD25B635}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16DE5DD0-1E0F-41CB-9DF3-FA36CD25B635}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16DE5DD0-1E0F-41CB-9DF3-FA36CD25B635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2890D45-9D65-4CB1-9FDF-F949BD446EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2890D45-9D65-4CB1-9FDF-F949BD446EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2890D45-9D65-4CB1-9FDF-F949BD446EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2890D45-9D65-4CB1-9FDF-F949BD446EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F815633-EFAB-44E6-8FED-3E092BA57F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F815633-EFAB-44E6-8FED-3E092BA57F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F815633-EFAB-44E6-8FED-3E092BA57F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F815633-EFAB-44E6-8FED-3E092BA57F22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
