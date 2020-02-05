@@ -195,5 +195,74 @@ namespace lab_42_northwind_core
             customers.ForEach(i => length++);
             return length;
         }
+
+        public int Testing_4()
+        {
+            var productList = new List<Product>();
+
+            using(var db = new NorthwindDbContext())
+            {
+                productList = db.Products.ToList();
+                return productList.Count;
+            }          
+        }
+
+
+        public int Testing_5()
+        {          
+            using (var db = new NorthwindDbContext())
+            {
+                var productList =
+                    from p in db.Products
+                    where p.ProductName.StartsWith("P")
+                    select p;
+
+                return productList.Count();
+            }            
+        }
+
+        public int Testing_6()
+        {
+            using (var db = new NorthwindDbContext())
+            {
+                var productList =
+                    from p in db.Products
+                    where p.ProductName.Contains("P")
+                    select p;
+
+                return productList.Count();
+            }
+        }
+
+        public int Testing_7()
+        {
+            using (var db = new NorthwindDbContext())
+            {
+                var productList =
+                    from p in db.Customers
+                    where p.City.Contains("London")
+                    select p;
+
+                return productList.Count();
+            }
+        }
+
+        public int Testing_8()
+        {
+            using (var db = new NorthwindDbContext())
+            {
+                var customersInCountry =
+                    from c in db.Customers
+                    group c by c.Country into Countries
+                    where Countries.Count() > 3
+                    select new
+                    {
+                        Countries.Key,
+                        Count = Countries.Count()
+                    };
+                return customersInCountry.Count();
+
+            }
+        }
     }
 }
