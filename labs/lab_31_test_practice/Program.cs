@@ -334,7 +334,11 @@ namespace lab_31_test_practice
         // Create a method that will write the string "Hello" reversed
         public string ReverseString(string str)
         {
-            return str;
+            char[] newChar = str.ToCharArray();
+            Array.Reverse(newChar);
+
+
+            return new string(newChar);
         }
 
         //solve 3x^2 + 2x - 1, one of the roots will be the correct answer

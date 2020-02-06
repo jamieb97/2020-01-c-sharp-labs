@@ -264,5 +264,35 @@ namespace lab_42_northwind_core
 
             }
         }
+        public int Testing_9()
+        {
+            using (var db = new NorthwindDbContext())
+            {
+                var cust =
+                    from c in db.Customers
+                    group c by c.City into Cities
+                    where Cities.Count() > 2
+                    select new
+                    {
+                        Cities.Key,
+                        Count = Cities.Count()
+                    };
+                return cust.Count();
+            }
+        }
+        //2nd Northwind test passed
+        public int Testing_10()
+        {
+            using (var db = new NorthwindDbContext())
+            {
+                var pro =
+                    from p in db.Products
+                    where p.ProductName.StartsWith("P")
+                    select p;
+
+                return pro.Count();
+
+            }
+        }
     }
 }
