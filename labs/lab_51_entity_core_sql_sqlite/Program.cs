@@ -15,12 +15,45 @@ namespace lab_51_entity_core_sql_sqlite
         static void Main(string[] args)
         {
             using (var db = new UserDatabaseContext())
-            {
-                users = db.Users.ToList();
-                categories = db.Categories.ToList();
 
-                users.ForEach(i => Console.WriteLine(i.UserName));
-                categories.ForEach(i => Console.WriteLine(i.CategoryName));
+            {
+
+                db.Database.EnsureDeleted();
+
+                db.Database.EnsureCreated();
+
+                var category1 = new Category() { CategoryName = "Admin" };
+
+                var category2 = new Category() { CategoryName = "User" };
+
+                var category3 = new Category() { CategoryName = "Personal" };
+
+                var user1 = new User() { UserName = "Abel", CategoryID = 1 };
+
+                var user2 = new User() { UserName = "Tyler", CategoryID = 2 };
+
+                var user3 = new User() { UserName = "Frank", CategoryID = 3 };
+
+                db.Categories.AddRange(category1, category2, category3);
+
+                db.Users.AddRange(user1, user2, user3);
+
+                db.SaveChanges();
+
+
+
+                var users = db.Users.ToList();
+
+                var categories = db.Categories.ToList();
+
+                foreach (var user in users)
+
+                {
+
+                    Console.WriteLine($"{user.UserID,-10} {user.UserName,-20}{user.Category.CategoryName}");
+
+                }
+
             }
         }
     }
@@ -32,10 +65,9 @@ namespace lab_51_entity_core_sql_sqlite
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
-            builder.UseSqlServer(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = Users; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
+            //builder.UseSqlServer(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = Users; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
 
-
-            //builder.UseSqlite(@"c:\");
+            builder.UseSqlite(@"Data Source = test.db");
         }
     }
 

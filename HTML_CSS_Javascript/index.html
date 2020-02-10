@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Web Page</title>
+	<style>
+		/* all elements*/
+		html{
+			background-color: #ffdead;
+			font-family: Kanit;
+			font-size: 1.2em;
+		}
+		h1{
+			font-size: 40px;
+		}
+		/*latter rule will override former rule
+		but 'layers of specificity which trump this eg #(id) stronger than .(class)'
+		CSS SELECTOR
+		ID - ONE ON PAGE
+			<p id = "x"> in css target this with #x{}*/
+		
+		#header-main{
+			text-decoration: underline;
+		}
+
+		/*CLASS - MANY ON PAGE
+			<p class = "y"> 
+		*/
+		.list-item{
+			background-color: #eee;
+			color: #ff;
+		}
+		.image-gallery{
+			border: 2px solid #eee;
+			padding: 10px;
+		}
+		img{
+			margin: 13px 11px;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="header-main">Header</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet ullamcorper orci, placerat tincidunt arcu. Nam euismod, velit non lacinia dictum, ipsum augue blandit arcu, eu sagittis sapien leo quis diam. Nulla eu arcu tristique, euismod ligula eu, commodo quam. Vivamus ultrices sapien et risus pretium, id pharetra leo placerat. Mauris ut metus eget magna vulputate scelerisque. Nulla vel augue erat. Quisque sit amet sapien eget lectus scelerisque finibus. Aliquam erat volutpat. Vivamus aliquet laoreet quam, non lacinia lacus vestibulum vel. Sed a arcu sit amet est dictum lobortis. Duis vitae suscipit ex.</p>
+	<!--unordered list-->
+	<ul>
+		<!--items in list--> 
+		<li class="list-item">One</li>
+		<li class="list-item">Two</li>
+		<li class="list-item">Three</li>				
+	</ul>
+	<!--ordered list-->
+	<ol>
+		<li class="list-item">Hi</li>
+		<li class="list-item">No</li>
+		<li class="list-item">Sad</li>
+	</ol>
+	<!--self closing-->
+	<div class="image-gallery">
+		<img src="https://picsum.photos/300/200?random=1">
+		<img src="https://picsum.photos/300/200?random=2">
+		<img src = "https://media.giphy.com/media/7A20b1WUepXpJAE6PL/giphy.gif" height="200" width="300" />	
+		<img src="https://picsum.photos/300/200?random=3">
+		<img src="https://picsum.photos/300/200?random=4">
+		<img src="https://media3.giphy.com/media/3o72F8t9TDi2xVnxOE/giphy.gif" height="200" width="300">
+		<img src="https://picsum.photos/300/200?random=6">
+		<img src="https://picsum.photos/300/200?random=7">
+		<img src="https://media0.giphy.com/media/IMDSOJvLn9RaU/giphy.gif" height="200" width="300">
+		<img src="https://picsum.photos/300/200?random=9">
+		<img src="https://picsum.photos/300/200?random=10">
+		<img src="https://i.kym-cdn.com/entries/icons/original/000/026/008/Screen_Shot_2018-04-25_at_12.24.22_PM.png" height="200" width="300">
+	</div>
+	<!--javascript best at foot of body-->
+	<script>
+		//outside function and has global scope across full apllication
+		var x = 1;
+		y =1; //also (by error) declare a global variable 
+		console.log(x);
+		console.log(y);
+		//semicolans not needed
+		console.log('no semicolons neeeded on this line')
+		
+	</script>
+</body>
+</html>
