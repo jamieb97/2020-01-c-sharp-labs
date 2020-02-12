@@ -107,9 +107,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_50_WPF_Entity_UC", "lab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_51_entity_core_sql_sqlite", "lab_51_entity_core_sql_sqlite\lab_51_entity_core_sql_sqlite.csproj", "{41D4C378-4100-4060-90F3-ACF73C6C9C5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_52_asp_demo", "lab_52_asp_demo\lab_52_asp_demo.csproj", "{BCE2E0F4-CB8A-4A4A-9AA1-6423F7FFD563}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_52_asp_demo", "lab_52_asp_demo\lab_52_asp_demo.csproj", "{BCE2E0F4-CB8A-4A4A-9AA1-6423F7FFD563}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "lab_53_mvc_framework_demo", "lab_53_mvc_framework_demo\lab_53_mvc_framework_demo.vbproj", "{E2CE9A1A-07A7-446F-95AD-35D5FC76B429}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_54_async_await", "lab_54_async_await\lab_54_async_await.csproj", "{3108156C-FE42-42AC-9A97-47666EB42C87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -333,6 +335,10 @@ Global
 		{E2CE9A1A-07A7-446F-95AD-35D5FC76B429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2CE9A1A-07A7-446F-95AD-35D5FC76B429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2CE9A1A-07A7-446F-95AD-35D5FC76B429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3108156C-FE42-42AC-9A97-47666EB42C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3108156C-FE42-42AC-9A97-47666EB42C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3108156C-FE42-42AC-9A97-47666EB42C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3108156C-FE42-42AC-9A97-47666EB42C87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
