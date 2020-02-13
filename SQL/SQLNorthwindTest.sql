@@ -39,4 +39,25 @@ group by od.OrderID
 
 --SELECT * FROM Spartans
 
-DROP TABLE Spartans
+--DROP TABLE Spartans
+
+
+SELECT DISTINCT City FROM Customers
+
+SELECT MAX(UnitPrice) AS MaxPrice, MIN(UnitPrice) AS MinPrice FROM Products p
+
+SELECT CategoryName, COUNT(p.ProductID) FROM Products p
+JOIN Categories c ON p.CategoryID = c.CategoryID
+GROUP BY c.CategoryName
+HAVING COUNT(p.UnitsInStock) > 0
+
+SELECT * FROM Customers c
+LEFT JOIN Orders o ON o.CustomerID = c.CustomerID
+
+SELECT * FROM Employees
+WHERE Region IS NULL
+
+SELECT * FROM Employees
+WHERE Region IS NOT NULL
+
+SELECT * FROM Products p WHERE p.ProductName LIKE 'p%'
