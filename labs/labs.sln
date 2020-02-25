@@ -117,9 +117,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_55_tasks", "lab_55_task
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_56_http_calling_data_from_internet", "lab_56_http_calling_data_from_internet\lab_56_http_calling_data_from_internet.csproj", "{D8637616-345D-4D9F-BB6E-84C120C47FBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_57_pass_by_reference", "lab_57_pass_by_reference\lab_57_pass_by_reference.csproj", "{B8C3C16C-FD8B-4EDD-B100-1397F65808E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_57_pass_by_reference", "lab_57_pass_by_reference\lab_57_pass_by_reference.csproj", "{B8C3C16C-FD8B-4EDD-B100-1397F65808E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_58_api_northwind_demo", "lab_58_api_northwind_demo\lab_58_api_northwind_demo.csproj", "{18BD3452-DAD1-4854-BA30-47D58450C4A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_59_API_Northwind_Core", "lab_59_API_Northwind_Core\lab_59_API_Northwind_Core.csproj", "{94946D50-CC98-4921-83A2-0F7E30B61A6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -363,6 +365,10 @@ Global
 		{18BD3452-DAD1-4854-BA30-47D58450C4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18BD3452-DAD1-4854-BA30-47D58450C4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18BD3452-DAD1-4854-BA30-47D58450C4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94946D50-CC98-4921-83A2-0F7E30B61A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94946D50-CC98-4921-83A2-0F7E30B61A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94946D50-CC98-4921-83A2-0F7E30B61A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94946D50-CC98-4921-83A2-0F7E30B61A6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
