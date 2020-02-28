@@ -3,6 +3,7 @@ select CustomerID, CompanyName, Customers.Address, City from Customers where Cit
 --1.2
 select * from Products
 select * from Products where QuantityPerUnit LIKE '%bottle%'
+select * from Products where QuantityPerUnit LIKE '%jars%'
 --1.3
 select ProductID, ProductName, Products.SupplierID, Suppliers.Country from Products
 JOIN Suppliers on Products.SupplierID = Suppliers.SupplierID
@@ -61,3 +62,7 @@ SELECT * FROM Employees
 WHERE Region IS NOT NULL
 
 SELECT * FROM Products p WHERE p.ProductName LIKE 'p%'
+
+
+SELECT * FROM Orders o
+JOIN Customers c ON c.CustomerID = o.CustomerID 

@@ -9,7 +9,7 @@ select Count(distinct TitleOfCourtesy) from Employees
 
 select * from Employees where TitleOfCourtesy = 'Dr.'
  
-select Count(Discontinued) from Products where Discontinued = 'true'
+select Count(Discontinued) from Products where Discontinued = 'false'
 
 --offset = skip
 --first 5 customers
@@ -272,4 +272,9 @@ order by o.OrderID
 SELECT COUNT(*) FROM Customers c
 INNER JOIN Orders o on c.CustomerID = o.CustomerID
 
+select COUNT(UnitsInStock) from products
+where UnitsInStock > 20
+
+select COUNT(ProductID) from Products
+where ProductName LIKE 'B%'
 
