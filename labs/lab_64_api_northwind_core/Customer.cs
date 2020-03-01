@@ -7,7 +7,6 @@ namespace lab_64_api_northwind_core
 {
     public partial class Customer
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
 
         [StringLength(5)]
         public string CustomerID { get; set; }

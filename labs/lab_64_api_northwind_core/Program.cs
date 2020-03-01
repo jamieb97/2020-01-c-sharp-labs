@@ -33,7 +33,14 @@ namespace lab_64_api_northwind_core
 
             var customer = new Customer() { CustomerID = "Jamie1", ContactName = "Test Customer", CompanyName = "McLaren", City = "London", Country = "UK"  };
 
+            var customer2 = new Customer() { CustomerID = "Jamie2", ContactName = "Test Customer", CompanyName = "McLaren", City = "London", Country = "UK" };
 
+            PostCustomerAsync(customer2);
+
+            UpdateCustomerAsync(customer2);
+
+            DeleteCustomerAsync(customer2);
+            Console.ReadLine();
 
         }
 
@@ -81,6 +88,57 @@ namespace lab_64_api_northwind_core
             var responseMessage = httpclient.PostAsync(url, HttpContent);
 
             return responseMessage.Result;
+        }
+
+        static async Task PostCustomerAsync(Customer customer)
+        {
+            var responseMessage = await PostCustomerDataAsync(customer);
+            Console.WriteLine($"We have successfully added customer with HTTP Response Status Code {responseMessage.IsSuccessStatusCode}");
+        }
+
+        static async Task<HttpResponseMessage> PostCustomerDataAsync(Customer customer)
+        {
+            string customerAsJson = JsonConvert.SerializeObject(customer);
+            var HttpContent = new StringContent(customerAsJson);
+            HttpContent.Headers.ContentType.MediaType = "application/json";
+            HttpContent.Headers.ContentType.CharSet = "UTF-8";
+
+            var responseMessage = await httpclient.PostAsync(url, HttpContent);
+            return responseMessage;
+        }
+
+        static async Task UpdateCustomerAsync(Customer customer)
+        {
+            var responseMessage = await UpdateCustomerDataAsync(customer);
+            Console.WriteLine($"We have updated customer {responseMessage.IsSuccessStatusCode}");
+        }
+
+        static async Task<HttpResponseMessage> UpdateCustomerDataAsync(Customer customer)
+        {
+            string customerAsJson = JsonConvert.SerializeObject(customer);
+            var HttpContent = new StringContent(customerAsJson);
+            HttpContent.Headers.ContentType.MediaType = "application/json";
+            HttpContent.Headers.ContentType.CharSet = "UTF-8";
+
+            var responseMessage = await httpclient.PutAsync(url, HttpContent);
+            return responseMessage;
+        }
+
+        static async Task DeleteCustomerAsync(Customer customer)
+        {
+            var responseMessage = await DeleteCustomerDataAsync(customer);
+            Console.WriteLine($"We have updated customer {responseMessage.IsSuccessStatusCode}");
+        }
+
+        static async Task<HttpResponseMessage> DeleteCustomerDataAsync(Customer customer)
+        {
+            string customerAsJson = JsonConvert.SerializeObject(customer);
+            var HttpContent = new StringContent(customerAsJson);
+            HttpContent.Headers.ContentType.MediaType = "application/json";
+            HttpContent.Headers.ContentType.CharSet = "UTF-8";
+
+            var responseMessage = await httpclient.DeleteAsync(url);
+            return responseMessage;
         }
     }
 }

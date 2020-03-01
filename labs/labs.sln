@@ -127,11 +127,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_60_Raw_SQL", "lab_60_Ra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_61_JSON_deserialize", "lab_61_JSON_deserialize\lab_61_JSON_deserialize.csproj", "{4F3E7B6B-4CD8-4D50-BC17-BBE0C06B94AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_62_streaming", "Lab_62_Streaming_Serialization\lab_62_streaming.csproj", "{72030741-FA40-4024-8317-4C7365CA22EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_62_streaming", "Lab_62_Streaming_Serialization\lab_62_streaming.csproj", "{72030741-FA40-4024-8317-4C7365CA22EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_63_serialization", "lab_68_serialization\lab_63_serialization.csproj", "{EAB829DE-E1BF-4F5B-BC3E-D880934621CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_63_serialization", "lab_68_serialization\lab_63_serialization.csproj", "{EAB829DE-E1BF-4F5B-BC3E-D880934621CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_64_api_northwind_core", "lab_64_api_northwind_core\lab_64_api_northwind_core.csproj", "{5904FDE0-30A0-4CE4-8C7D-3DC1CF23A067}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_64_api_northwind_core", "lab_64_api_northwind_core\lab_64_api_northwind_core.csproj", "{5904FDE0-30A0-4CE4-8C7D-3DC1CF23A067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Football_Database", "Football_Database\Football_Database.csproj", "{ECD6C37A-9BE7-49BE-9CE5-4AC146EB9B62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -399,6 +401,10 @@ Global
 		{5904FDE0-30A0-4CE4-8C7D-3DC1CF23A067}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5904FDE0-30A0-4CE4-8C7D-3DC1CF23A067}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5904FDE0-30A0-4CE4-8C7D-3DC1CF23A067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD6C37A-9BE7-49BE-9CE5-4AC146EB9B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD6C37A-9BE7-49BE-9CE5-4AC146EB9B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD6C37A-9BE7-49BE-9CE5-4AC146EB9B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD6C37A-9BE7-49BE-9CE5-4AC146EB9B62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
