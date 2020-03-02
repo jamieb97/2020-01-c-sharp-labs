@@ -1,0 +1,39 @@
+﻿<Window x:Class="lab_66_wpf_football_database.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_66_wpf_football_database"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#000000">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="LabelHeading" Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Center" Grid.ColumnSpan="3" Content="Football" Foreground="White" FontSize="25"/>
+        <ListView x:Name="ListViewPlayers" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3" Background="#1a1a1a" Foreground="White">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding PlayerID}"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding PlayerName}"/>
+                    <GridViewColumn Header="Age" DisplayMemberBinding="{Binding PlayerAge}"/>
+                    <GridViewColumn Header="Salary" DisplayMemberBinding="{Binding PlayerSalary}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="ShowDataButton" Grid.Row="1" Grid.ColumnSpan="3" Content="Display Player Data" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" Background="#0d0d0d" Foreground="White" Click="ShowDataButton_Click"/>
+    </Grid>
+</Window>
