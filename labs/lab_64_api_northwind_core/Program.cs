@@ -31,11 +31,13 @@ namespace lab_64_api_northwind_core
 
             Console.WriteLine($"\n\nMain method did not for async call. Failed at {s.ElapsedMilliseconds}");
 
-            var customer = new Customer() { CustomerID = "Jamie1", ContactName = "Test Customer", CompanyName = "McLaren", City = "London", Country = "UK"  };
+            var customer = new Customer() { CustomerID = "JAM01", ContactName = "Test Customer", CompanyName = "McLaren", City = "London", Country = "UK"  };
 
-            var customer2 = new Customer() { CustomerID = "Jamie2", ContactName = "Test Customer", CompanyName = "McLaren", City = "London", Country = "UK" };
+            var customer2 = new Customer() { CustomerID = "JAM02", ContactName = "Test Customer", CompanyName = "Santos", City = "Rio", Country = "Brazil" };
 
-            PostCustomerAsync(customer2);
+            PostCustomer(customer);
+
+            PostCustomerAsync(customer);
 
             UpdateCustomerAsync(customer2);
 
@@ -127,18 +129,16 @@ namespace lab_64_api_northwind_core
         static async Task DeleteCustomerAsync(Customer customer)
         {
             var responseMessage = await DeleteCustomerDataAsync(customer);
-            Console.WriteLine($"We have updated customer {responseMessage.IsSuccessStatusCode}");
+            Console.WriteLine($"We have deleted customer {responseMessage.IsSuccessStatusCode}");
         }
 
         static async Task<HttpResponseMessage> DeleteCustomerDataAsync(Customer customer)
         {
-            string customerAsJson = JsonConvert.SerializeObject(customer);
-            var HttpContent = new StringContent(customerAsJson);
-            HttpContent.Headers.ContentType.MediaType = "application/json";
-            HttpContent.Headers.ContentType.CharSet = "UTF-8";
-
-            var responseMessage = await httpclient.DeleteAsync(url);
-            return responseMessage;
+            using (var client = new HttpClient())
+            {
+                var responseMessage = await httpclient.DeleteAsync(url+"//"+customer.CustomerID);
+                return responseMessage;
+            }
         }
     }
 }
