@@ -17,8 +17,6 @@ namespace lab_65_Football_API.Models
         public int ContractLength { get; set; }
         public int? OwnerID { get; set; }
         public virtual Owner Owner { get; set; }
-        [Display(Name = "DOB")]
-        [DataType(DataType.Date)]
-        public DateTime DateOfBirth { get; set; }
+
     }
 }

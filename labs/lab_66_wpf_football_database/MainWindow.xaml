@@ -24,16 +24,23 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Label x:Name="LabelHeading" Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Center" Grid.ColumnSpan="3" Content="Football" Foreground="White" FontSize="25"/>
-        <ListView x:Name="ListViewPlayers" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3" Background="#1a1a1a" Foreground="White">
+        <ListView x:Name="ListViewPlayers" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3" Background="#1a1a1a" Foreground="White" MouseDoubleClick="ListViewPlayers_MouseDoubleClick">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" DisplayMemberBinding="{Binding PlayerID}"/>
                     <GridViewColumn Header="Name" DisplayMemberBinding="{Binding PlayerName}"/>
-                    <GridViewColumn Header="Age" DisplayMemberBinding="{Binding PlayerAge}"/>
-                    <GridViewColumn Header="Salary" DisplayMemberBinding="{Binding PlayerSalary}"/>
+                    <GridViewColumn Header="Age" DisplayMemberBinding="{Binding Age}"/>
+                    <GridViewColumn Header="Salary" DisplayMemberBinding="{Binding Salary}"/>
+                    <GridViewColumn Header="Contract Length" DisplayMemberBinding="{Binding ContractLength}"/>
+                    <GridViewColumn Header="Agent ID" DisplayMemberBinding="{Binding AgentID}"/>
+                    <GridViewColumn Header="Owner ID" DisplayMemberBinding="{Binding OwnerID}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Button x:Name="ShowDataButton" Grid.Row="1" Grid.ColumnSpan="3" Content="Display Player Data" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" Background="#0d0d0d" Foreground="White" Click="ShowDataButton_Click"/>
+        <Button x:Name="PostButton" Grid.Row="3" Grid.Column="5" Content="Add Player" FontSize="20" Background="#0d0d0d" Foreground="White" Click="PostButton_Click"/>
+        <TextBox x:Name="TextBoxPlayerName" Grid.Row="2" Grid.Column="4" Background="#0d0d0d" Foreground="White"/>
+        <TextBox x:Name="TextBoxPlayerAge" Grid.Row="2" Grid.Column="5" Background="#0d0d0d" Foreground="White"/>
+        <TextBox x:Name="TextBoxPlayerSalary" Grid.Row="2" Grid.Column="6" Background="#0d0d0d" Foreground="White"/>
     </Grid>
 </Window>
