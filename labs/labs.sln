@@ -139,6 +139,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_65_Football_API", "lab_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_66_wpf_football_database", "lab_66_wpf_football_database\lab_66_wpf_football_database.csproj", "{09E8332D-75F7-489F-8749-548E097025B3}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_67_MVC_Website_Football", "lab_67_MVC_Website_Football\lab_67_MVC_Website_Football.csproj", "{9D9DFA12-217A-4B69-8258-905B0C29848F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_68_mvc_website_2", "lab_68_mvc_website_2\lab_68_mvc_website_2.csproj", "{8C8F94D5-C5A6-4E95-8DF1-78B275C6541C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -417,6 +421,14 @@ Global
 		{09E8332D-75F7-489F-8749-548E097025B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09E8332D-75F7-489F-8749-548E097025B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09E8332D-75F7-489F-8749-548E097025B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D9DFA12-217A-4B69-8258-905B0C29848F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D9DFA12-217A-4B69-8258-905B0C29848F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D9DFA12-217A-4B69-8258-905B0C29848F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D9DFA12-217A-4B69-8258-905B0C29848F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C8F94D5-C5A6-4E95-8DF1-78B275C6541C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C8F94D5-C5A6-4E95-8DF1-78B275C6541C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C8F94D5-C5A6-4E95-8DF1-78B275C6541C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C8F94D5-C5A6-4E95-8DF1-78B275C6541C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

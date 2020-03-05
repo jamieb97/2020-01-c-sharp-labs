@@ -1,0 +1,49 @@
+﻿@model IEnumerable<lab_68_mvc_website_2.Models.Technical>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AeroRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngineSupplier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChassisRating)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AeroRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EngineSupplier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChassisRating)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TechnicalID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TechnicalID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TechnicalID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

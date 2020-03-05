@@ -20,7 +20,7 @@ JOIN Orders o ON OD.OrderID = o.OrderID
 JOIN EmployeeTerritories et ON o.EmployeeID = et.EmployeeID
 JOIN Territories t ON et.TerritoryID = t.TerritoryID
 JOIN Region r ON t.RegionID = r.RegionID
-where OD.Quantity > 1000000
+where OD.Quantity > 1
 --1.7
 SELECT COUNT(*) FROM Orders WHERE Freight > 100.00 AND ShipCountry in ('UK', 'USA')
 --1.8
@@ -66,3 +66,9 @@ SELECT * FROM Products p WHERE p.ProductName LIKE 'p%'
 
 SELECT * FROM Orders o
 JOIN Customers c ON c.CustomerID = o.CustomerID 
+
+
+SELECT * FROM Customers c
+LEFT JOIN Orders o ON o.CustomerID = c.CustomerID
+
+SELECT DISTINCT(City) FROM Customers

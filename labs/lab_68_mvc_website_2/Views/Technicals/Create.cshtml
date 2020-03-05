@@ -1,0 +1,44 @@
+﻿@model lab_68_mvc_website_2.Models.Technical
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Technical</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AeroRating" class="control-label"></label>
+                <input asp-for="AeroRating" class="form-control" />
+                <span asp-validation-for="AeroRating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EngineSupplier" class="control-label"></label>
+                <input asp-for="EngineSupplier" class="form-control" />
+                <span asp-validation-for="EngineSupplier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChassisRating" class="control-label"></label>
+                <input asp-for="ChassisRating" class="form-control" />
+                <span asp-validation-for="ChassisRating" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

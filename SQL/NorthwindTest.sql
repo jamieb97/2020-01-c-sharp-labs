@@ -4,7 +4,9 @@ select top 5 * from Customers order by CustomerID desc
 select * from Customers where City = 'London'
 
 --select * from INFORMATION_SCHEMA.COLUMNS where table_name = 'ContactTitle'
-select distinct TitleOfCourtesy from Employees
+select distinct TitleOfCourtesy, count(*) AS amount from Employees
+group by TitleOfCourtesy
+
 select Count(distinct TitleOfCourtesy) from Employees
 
 select * from Employees where TitleOfCourtesy = 'Dr.'

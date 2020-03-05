@@ -1,0 +1,53 @@
+﻿@model IEnumerable<lab_65_Football_API.Models.Scout>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ScoutName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Player)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryBased)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StaffAmount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScoutName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Player.PlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryBased)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffAmount)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ScoutID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ScoutID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ScoutID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

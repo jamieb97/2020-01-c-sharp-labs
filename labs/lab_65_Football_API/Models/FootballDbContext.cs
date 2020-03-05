@@ -37,6 +37,10 @@ namespace lab_65_Football_API.Models
                 new Player { PlayerID = 2, PlayerName = "Pogba", AgentID = 1, Age = 26, ContractLength = 3, Salary = 300000}
                 );
 
+            builder.Entity<HeadStaff>().HasData(
+                new HeadStaff { HeadStaffID = 1, StaffName = "Edu", StaffRole = "Sporting Director", OwnerID = 1}
+                );
+
             builder.Entity<Agent>().Property(a => a.AgentName).IsRequired().HasMaxLength(25);
         }
     }
