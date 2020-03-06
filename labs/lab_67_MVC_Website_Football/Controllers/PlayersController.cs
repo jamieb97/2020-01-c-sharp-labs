@@ -58,6 +58,20 @@ namespace lab_67_MVC_Website_Football.Controllers
             }
         }
 
+
+        public async Task<IActionResult> Create([Bind("PlayerID,PlayerName,AgentID,Age,Salary,ContractLength,OwnerID")] Player player)
+        {
+            
+            if (ModelState.IsValid)
+            {
+                string playerAsJson = JsonConvert.SerializeObject(player);
+                
+
+            }
+
+            return View(player);
+        }
+
 #else
         // GET: Players
         public async Task<IActionResult> Index()

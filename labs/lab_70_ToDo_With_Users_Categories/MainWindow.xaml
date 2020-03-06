@@ -1,0 +1,35 @@
+﻿<Window x:Class="lab_70_ToDo_With_Users_Categories.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_70_ToDo_With_Users_Categories"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920" FontSize="35">
+    <Grid Background="#FFDEAD">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="LabelHeader" Content="ToDoItems" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" FontSize="50" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <ListView x:Name="ListViewToDos" Grid.Row="2" Grid.Column="0" Background="#ffd495" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="120" DisplayMemberBinding="{Binding ToDoID}"/>
+                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding ToDoName}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
