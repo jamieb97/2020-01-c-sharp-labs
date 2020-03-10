@@ -143,9 +143,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_67_MVC_Website_Football
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_68_mvc_website_2", "lab_68_mvc_website_2\lab_68_mvc_website_2.csproj", "{8C8F94D5-C5A6-4E95-8DF1-78B275C6541C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_69_ToDo_API_Users_Categories", "lab_69_ToDo_API_Users_Categories\lab_69_ToDo_API_Users_Categories.csproj", "{055C3894-E0C0-4FED-8C63-EEF3080C0FF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_69_ToDo_API_Users_Categories", "lab_69_ToDo_API_Users_Categories\lab_69_ToDo_API_Users_Categories.csproj", "{055C3894-E0C0-4FED-8C63-EEF3080C0FF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_70_ToDo_With_Users_Categories", "lab_70_ToDo_With_Users_Categories\lab_70_ToDo_With_Users_Categories.csproj", "{CBE79A86-7CD3-45EC-A16F-D1232657C838}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_70_ToDo_With_Users_Categories", "lab_70_ToDo_With_Users_Categories\lab_70_ToDo_With_Users_Categories.csproj", "{CBE79A86-7CD3-45EC-A16F-D1232657C838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_71_wpf_panels", "lab_71_wpf_panels\lab_71_wpf_panels.csproj", "{D82F5AF1-9DCA-44F3-B1E3-A00265B1B49B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -441,6 +443,10 @@ Global
 		{CBE79A86-7CD3-45EC-A16F-D1232657C838}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBE79A86-7CD3-45EC-A16F-D1232657C838}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBE79A86-7CD3-45EC-A16F-D1232657C838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D82F5AF1-9DCA-44F3-B1E3-A00265B1B49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82F5AF1-9DCA-44F3-B1E3-A00265B1B49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82F5AF1-9DCA-44F3-B1E3-A00265B1B49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82F5AF1-9DCA-44F3-B1E3-A00265B1B49B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

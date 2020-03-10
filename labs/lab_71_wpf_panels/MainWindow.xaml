@@ -1,0 +1,57 @@
+﻿<Window x:Class="lab_71_wpf_panels.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_71_wpf_panels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="Indigo">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="WPFPanelsLabel" Content="WPF Panel" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="3" FontSize="25" FontWeight="Bold" Foreground="LightBlue"/>
+        <StackPanel x:Name="StackPanelVerticle" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="Green">
+            <Button x:Name="ButtonTest1" Content="Button01" Background="DarkSlateGray" Foreground="YellowGreen" Click="ButtonTest1_Click"/>
+            <Button x:Name="ButtonTest2" Content="Button02" Background="DarkSlateGray" Foreground="YellowGreen" Click="ButtonTest2_Click"/>
+            <Button x:Name="ButtonTest3" Content="Button03" Background="DarkSlateGray" Foreground="YellowGreen"/>
+            <Button x:Name="ButtonTest4" Content="Button04" Background="DarkSlateGray" Foreground="YellowGreen" Click="ButtonTest4_Click"/>
+            <Button x:Name="ButtonTest5" Content="Button05" Background="DarkSlateGray" Foreground="YellowGreen" Click="ButtonTest5_Click"/>
+            <Button x:Name="ButtonTest6" Content="Button06" Background="DarkSlateGray" Foreground="YellowGreen" Click="ButtonTest6_Click"/>
+            <Label x:Name="Label01" Content="" Background="Orchid" Foreground="SkyBlue"/>
+        </StackPanel>
+
+        <ScrollViewer x:Name="ScrollViewerCustomer" Visibility="Hidden" VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="4">
+            <StackPanel x:Name="StackPanelCustomers"  Background="Yellow">
+                <ListBox x:Name="ListBoxCustomer" Background="MediumOrchid" Foreground="Thistle"/>
+            </StackPanel>
+        </ScrollViewer>
+        <TabControl x:Name="TabControll01" Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="2" Grid.RowSpan="4" Background="DarkOrange">
+            <TabItem Header="Customers">
+                <TabPanel>
+                    <Label Content="Here is a customer" Foreground="WhiteSmoke"/>
+                    <Label Content="Here is a customer" Foreground="WhiteSmoke"/>
+                    <Label Content="Here is a customer" Foreground="WhiteSmoke"/>
+                </TabPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
